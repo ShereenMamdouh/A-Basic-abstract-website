@@ -1,0 +1,46 @@
+create database office;
+use office;
+create TABLE projects(
+    pro_id int not null,
+    dep_name varchar(10) not null,
+description varchar(10) not null,
+no_tasks int,
+done_tasks int,
+costs int not null,
+    PRIMARY key(pro_id)
+    );
+INSERT INTO projects(pro_id,pro_name,description,no_tasks,done_tasks,costs) VALUES (1,'Chemistry lab','in this project we design a chemistry lab with all the safety majors' ,4,1,30000);
+INSERT INTO projects(pro_id,pro_name,description,no_tasks,done_tasks,costs) VALUES (2,'resort','in this project we desgin a whole resort',12,5,200000);
+INSERT INTO projects(pro_id,pro_name,description,no_tasks,done_tasks,costs) VALUES (3,'home design','in this project we design a flat with 2 rooms a hall bathroom and kitchen',5,1,20000);
+INSERT INTO projects(pro_id,pro_name,description,no_tasks,done_tasks,costs) VALUES (4,'Arts gallery','in this project we desgin an art gallery',3,1,10000);
+use office;
+create TABLE employee(
+    employee_id int not null,
+   employee_name varchar(10) not null,
+password varchar(10) not null,
+comments varchar(10),
+salary int,
+attendance int,
+tasks varchar(10) ,
+    PRIMARY key(employee_id)
+    );
+INSERT INTO employee( employee_id , employee_name,password,salary,attendance,tasks) VALUES (1,'myan','101',1000,8,'design a bathroom  and a room and art room and a spa');
+INSERT INTO employee( employee_id , employee_name,password,salary,attendance,tasks) VALUES (2,'shereen','202',3000,13,'design a kitchen and a bar with swimming pool ');
+INSERT INTO employee( employee_id , employee_name,password,salary,attendance,tasks) VALUES (3,'wegdan','303',2500,12,'desgin a room and the whole outline of the resort');
+
+create TABLE customer(
+    customer_id int not null,
+   name varchar(10) not null,
+password varchar(10) not null,
+tasks varchar(10),
+done_tasks varchar(10) ,
+feedbacks varchar(10) ,
+    PRIMARY key( customer_id)
+    
+    );
+INSERT INTO customer(customer_id,name,password ,tasks ,done_tasks) VALUES (1,'mohamed ahmed','101','in this project we design a chemistry lab with all the safety majors with costs $30000 / task1:flooring $5000 / tasks2 : safety tools : $10000/ task3:cieling and paints: $5000/ task4:desgin','task1:flooring $5000' );
+INSERT INTO customer(customer_id,name,password,tasks,done_tasks) VALUES (2,'yaser fouad','202','in this project we desgin a whole resort with costs200000 / tasks 1 - 5 :$20,000/ tasks 8-12:$100,000 / tasks:6,7:$80,000 the whole outline of the resort + spa and bar with swimming pool','tasks 1 - 5 :$20,000');
+INSERT INTO customer(customer_id,name,password,tasks ,done_tasks) VALUES (3,'fady ','303','in this project we design a flat task1: 2 rooms $7000 / task2 & 3 :2 rooms $7000/ task 4& 5 :bathroom and kitchen $10000 with overall costs 20000','task1:$ 3000 hall');
+INSERT INTO customer(customer_id,name,password,tasks ,done_tasks) VALUES (4,'samar','404','in this project we desgin an art gallery with over allcosts $ 10000  / task1:design of gallery $5000 /task2: art room $2000 /task3:halling $3000 ','task1: design of gallery $5000');
+
+
